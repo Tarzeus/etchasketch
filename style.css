@@ -1,0 +1,30 @@
+body{
+    background-color: silver;
+}
+#title{
+    color:red;
+    background-color: green;
+}
+#container{
+    background-color: cyan;
+    display: grid;
+    row-gap: 5px;
+    column-gap: 5px;
+    padding: 10px;
+}
+.gridRow{
+    display: grid;
+    background-color: blue;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.gridColumn{
+    display: grid;
+    background-color: green;
+    border: 1px solid black;
+    padding: 20px;
+    font-size 30px;
+    text-align: center;
+}

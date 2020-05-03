@@ -1,40 +1,38 @@
 #page {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 70vh;
     margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
 html{
     background-color: rgb(245, 245, 173);;
-    height: 97%;
+    
 }
 #container {
     display: flex;
     flex-wrap: wrap;
-    width: 320px;
-    height: 320px;
+    width: 500px;
+    height: 500px;
     background-color: rgb(223, 255, 214);
     margin: auto;
     align-items: flex-start;
     border: 5px solid red;
 }
 button {
-    margin: auto;
+    margin: 3% auto 7% auto;
     height: 40px;
     background-color: rgb(223, 255, 214);
-    border-style: solid;
-    border-width: 3px;
-    border-color: #0084ff;
-    outline: none;
+    border: 3px solid red;
+    border-radius: 70%;
     color: rgb(240, 32, 32);
     font-size: large;
     font-weight: 900;
 }
 button:hover {
-    background-color: rgba(34, 99, 163, 0.644);
+    background-color: rgba(131, 202, 163, 0.644);
 }
-.content {
+.cell {
     width: 20px;
     height: 20px;
 }

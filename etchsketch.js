@@ -32,7 +32,7 @@ function changeGridSize () {
     for (let i = 0; i < numberOfPixels; i++) {
         cell[i].remove();
     }do {
-        number = prompt('Select canvas size (between 1 and 100): ');
+        number = prompt('Select grid size (1-100)');
     } while (number < 1 || number > 100);
     numberOfPixels = number*number;
 }

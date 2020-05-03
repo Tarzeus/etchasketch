@@ -1,34 +1,57 @@
-//Create title element.
-let title = document.createElement('h1');
-title.setAttribute('id', 'title');
-title.textContent = 'Etch A Sketch';
-document.body.appendChild(title);
+const container = document.querySelector('#container');
+let content = [];
 
-//Create main container for grid.
-let container = document.createElement('div');
-container.setAttribute('id', 'container');
-document.body.appendChild(container);
+let number = 16;
+let numberOfPixels = number*number; 
 
-//create 16 x 16 grid rows and columns(difficult).
-function defaultGrid(){
-    createRows(16);
-    createColumns(16);
+let buttonClear;
+
+let sizeOfCanvas = 320;
+let sizeOfPixels = sizeOfCanvas / number;
+
+buttonClear = document.getElementById('clear');
+buttonClear.addEventListener('click', clearGrid);
+buttonClear.addEventListener('click', changeGridSize);
+buttonClear.addEventListener('click', setGridSize);
+
+setGridSize();
+function setGridSize () {
+    sizeOfPixels = sizeOfCanvas / number;
+    for (let i = 0; i < numberOfPixels; i++) {
+
+        content[i] = document.createElement('div');
+        content[i].classList.add('content');
+
+        content[i].style.width = sizeOfPixels + 'px';
+        content[i].style.height = sizeOfPixels + 'px';
+
+        content[i].addEventListener('mouseover', rainbowColor);
+        container.appendChild(content[i]);
+}}
+
+function blackColor () {
+    this.style.backgroundColor = 'black';
 }
 
-function createRows(rows){
-    for (i = 0; i < rows; i++){
-        let row = document.createElement('div');
-        container.appendChild(row).className = 'gridRow';
+function clearGrid () {
+    for (let i = 0; i < numberOfPixels; i++) {
+        content[i].style.backgroundColor = none;
     }
+};
+
+function changeGridSize () {
+    for (let i = 0; i < numberOfPixels; i++) {
+        content[i].remove();
+    }do {
+        number = prompt('Select canvas size (between 1 and 100): ');
+    } while (number < 1 || number > 100);
+    numberOfPixels = number*number;
 }
 
-function createColumns(columns){
-    for (j = 0; j < columns; j++){
-        let column = document.createElement('div');
-        container.appendChild(column).className = 'gridColumn';
-    }
+function rainbowColor () {
+  let x = Math.floor(Math.random() * 256);
+  let y = Math.floor(Math.random() * 256);
+  let z = Math.floor(Math.random() * 256);
+  let bgColor = "rgb(" + x + "," + y + "," + z + ")";
+  this.style.backgroundColor = bgColor;
 }
-
-//??????????????????????????????
-
-console.log(defaultGrid());

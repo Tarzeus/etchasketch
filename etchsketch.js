@@ -7,7 +7,6 @@ document.body.appendChild(title);
 //Create main container for grid.
 let container = document.createElement('div');
 container.setAttribute('id', 'container');
-container.textContent = 'put my grid in here';
 document.body.appendChild(container);
 
 //create 16 x 16 grid rows and columns(difficult).

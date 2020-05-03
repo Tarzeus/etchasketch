@@ -4,27 +4,19 @@ body{
 #title{
     color:red;
     background-color: green;
+    text-align: center;
 }
 #container{
-    background-color: cyan;
-    display: grid;
-    row-gap: 5px;
-    column-gap: 5px;
-    padding: 10px;
+    background-color: cyan;    
+    display: grid;    
 }
 .gridRow{
-    display: grid;
     background-color: blue;
     border: 1px solid black;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
+    padding: 10px;
 }
 .gridColumn{
-    display: grid;
     background-color: green;
     border: 1px solid black;
-    padding: 20px;
-    font-size 30px;
-    text-align: center;
+    padding: 10px;
 }
